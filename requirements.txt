@@ -1,0 +1,11 @@
+globus-compute-endpoint
+distributed
+holoviews
+hvplot
+xarray
+matplotlib
+esgf-pyclient
+netcdf4
+h5netcdf
+pydap 
+scipy
