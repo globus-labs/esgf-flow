@@ -6,6 +6,8 @@ This repo shows how Globus Flows and Globus Compute can be used to run ESGF work
 To run this notebook you will need to install packages on the client side.:
 > `pip install globus-compute-sdk globus-automate-client jupyter`
 
+Note: It is best to use the same Python version across the entire deployment. There are serialization and runtime issues if a function is registered by a client and interpreted by an endpoint with different Python versions. I recommend using python 3.10 across all environments.
+
 
 ## Setting up a Globus Compute endpoint
 You can start an endpoint on a remote resource to perform functions on-demand. While endpoints are typically configured to use a batch scheduler to acquire compute nodes to perform tasks, the default configuration just deploys an endpoint to run tasks on the local host. In this local configuration, the endpoint's workers will inherit the python environment the endpoint is started in. Therefore, it is best if you create a python env for the endpoint and install the dependencies.
